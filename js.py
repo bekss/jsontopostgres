@@ -1,25 +1,22 @@
 import json
 import psycopg2
 from pprint import pprint
-import ast
-
-path = 'va.json'
+from tabulate import  tabulate
+import os
+import time
 
 
 class DatatoJson:
-    def __init__(self, path, table_name='client_info'):
-        self.path = path
-        self.name = None
-        self.names = None
+    def __init__(self):
+        self.creator = "Beks"
         self.connection = psycopg2.connect(user="postgres",
                                            password="admin",
                                            host="127.0.0.1",
                                            port="5432",
                                            database="json")
         self.cursor = self.connection.cursor()
-        # self.get_data_from_file()
+        self.choose_number()
         self.create_table()
-        # self.print()
         self.into_to_database()
 
     def chek(self):
@@ -28,8 +25,6 @@ class DatatoJson:
         return self.name
 
     def create_table(self):
-        # self.names = self.cursor.execute(f"select * from information_shema.tables where table_name = {client_info}")
-        # self.name = bool(self.cursor.rowcount)
         print('succes')
         print(self.chek())
 
@@ -103,16 +98,7 @@ class DatatoJson:
         print('get data')
         with open(self.path, 'r', encoding='utf-8') as lst:
             data = json.loads(lst.read())
-
-            # data1 = data[1]['founders']
-            # print(data1[0])
-            # for a in data[2]['founders']:
-            #     cmd = a['pin']
-            #     print(cmd)
-
-            print(len(data))
             length = len(data)
-            print(length)
 
         for a in range(length):
             data1 = data[a]
@@ -137,8 +123,6 @@ class DatatoJson:
                 else:
                     print('You haved this tables')
 
-
-
         for size_of_data in range(length):
             if data[size_of_data]['founders'] is None:
                 print('true')
@@ -161,74 +145,39 @@ class DatatoJson:
                         print('You haved this tables')
 
 
+    def file(self):
+        filename = input("Введите путь к файлу ")
+        if os.path.exists(filename):
+            print(f"{filename} указанный файл существует\n {filename} обработан")
+        elif filename == '3':
+            print('')
+            return self.choose_number()
+        else:
+            print(f"{filename}файл не существует \n")
+            return self.file()
 
+    def choose_number(self):
+        self.about()
+        print("1) Показать файлы\n2) Выбрать файл\n3) Вернуться в меню\n4) чтобы выйти нажмите любую клавишу")
+        choose = input()
+        if choose == '1':
+            pprint(os.listdir())
+            print('\n')
+            time.sleep(0.3)
+            return self.choose_number()
+        elif choose == '2':
+            print('')
+            return self.file()
+        elif choose == '3':
+            return self.choose_number()
+        else:
+            print('Exit')
 
+    def about(self):
+        a = tabulate([('Hey guys это программа для конвертации из json в Postgresql базу.'),
+                      (' Для того чтобы использовать воспользуйтесь с нижеприведенным меню '),
+                      f'"Create by {self.creator}"'])
+        print(a)
 
+data = DatatoJson()
 
-    # def print(self):
-    #     database = self.get_data_from_file()
-    #     print(database[id])
-
-
-data = DatatoJson('../../va.json')
-
-# for key, value in data[0][1].items():
-#     print(key, value)
-
-# pprint(data[0])
-# if type(data) == list:
-#     first_record = data[0]
-# pprint(first_record)
-
-# columns = [list(x.keys()) for x in data][0]
-# pprint(type(data))
-
-# connection = psycopg2.connect(user="postgres",
-#                               password="admin",
-#                               host="127.0.0.1",
-#                               port="5432",
-#                               database="json")
-# cursor = connection.cursor()
-#
-# create_table_query = '''CREATE TABLE json_data
-#       (ID INT PRIMARY KEY     NOT NULL,
-#       MODEL           TEXT    NOT NULL,
-#       PRICE         REAL);'''
-#
-# cursor.execute(create_table_query)
-# connection.commit()
-# print("Table created successfully in PostgreSQL ")
-
-
-# data = json.load(open('MU2.json', 'r'))
-# jtopy=json.dumps(data) #json.dumps take a dictionary as input and returns a string as output.
-# dict_json=json.loads(jtopy) # json.loads take a string as input and returns a dictionary as output.
-# print(dict_json[0])
-
-# x =  '{ "name":"John", "age":30, "city":"New York"}'
-# y = json.loads(x)
-# print(y['age'])
-
-# with open(path, 'r') as f:
-#     data = json.loads(f)
-#     for i in data:
-#         print(i)
-#
-#
-# x = {
-#   "name": "John",
-#   "age": 30,
-#   "married": True,
-#   "divorced": False,
-#   "children": ("Ann","Billy"),
-#   "pets": None,
-#   "cars": [
-#     {"model": "BMW 230", "mpg": 27.5},
-#     {"model": "Ford Edge", "mpg": 24.1}
-#   ]
-# }
-#
-# print(json.dumps(x))
-
-# with open('data.json', 'w' , encoding ='utf-8') as file:
-#     file.write(jsonData)
