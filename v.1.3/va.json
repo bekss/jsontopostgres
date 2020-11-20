@@ -1,0 +1,64 @@
+[
+    {
+        "id": 11111111,
+        "updated": "2012-20-20T13:45:00.09",
+        "foreign_part": false,
+        "registr_code": "98645-9863-202",
+        "stat_sub_code": "988554",
+        "tin": "575456456564",
+        "region": "London ",
+        "city": "London",
+        "district": "London",
+        "village": "",
+        "microdistrict": "",
+        "street": "ул.London",
+        "house": "1432A",
+        "room": "bar",
+        "phones": "+39655645644",
+        "email1": "",
+        "email2": null,
+        "capital": 1200.00,
+        "order_date": "2014-09-21T00:01:15",
+        "order_num": "5508",
+        "first_order_date": null,
+        "ind_founders": 0,
+        "jur_founders": 0,
+        "total_founders": 3,
+        "base_bus_code": "70.22.0",
+        "description": "",
+        "full_name_gl": "LOndon KS",
+        "full_name_ol": "LOndon KS",
+        "short_name_gl": "LOndon KS",
+        "short_name_ol": "LOndon KS",
+        "category": 11,
+        "category_name": "LOndon KS",
+        "shief": "LOndon KS",
+        "reorganization": false,
+        "screate": 100000,
+        "screate_name": "Losco",
+        "reorg_type": null,
+        "reorg_type_name": null,
+        "ownership": 41500,
+        "ownership_name": "Thinking",
+        "founders": [
+            {
+                "subject": 11111111,
+                "pin": "54564646564",
+                "full_name": "Losing",
+                "citizenship": "USAA"
+            },
+            {
+                "subject": 11111111,
+                "pin": "54564646564",
+                "full_name": "Losing RL",
+                "citizenship": "USAA"
+            },
+            {
+                "subject": 11111111,
+                "pin": "54564646564",
+                "full_name": "Ketrin Acyl",
+                "citizenship": "USAA"
+            }
+        ]
+    }
+  ]
