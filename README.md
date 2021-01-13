@@ -23,12 +23,12 @@ pipenv install requests
 pipenv install tksheet  
 pipenv install tkcalendar  
 pipenv install tkinter  
- 
+____
 [The Desktop program:](https://github.com/bekss/jsontopostgres/blob/second_comp/v.1.5/exe.win-amd64-3.8.exe)  
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Image.PNG)  
-
-Image of the console programm:  
+____
+[Image of the console programm:](https://github.com/bekss/jsontopostgres/blob/main/jsontopostgresql.exe)
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Console_image.PNG)  
 
