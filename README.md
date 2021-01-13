@@ -25,7 +25,9 @@ pipenv install tkcalendar
 pipenv install tkinter  
 
 Image of the program  
-![](https://github.com/bekss/jsontopostgres/blob/main/Image.PNG)
+
+![](https://github.com/bekss/jsontopostgres/blob/main/Image.PNG)  
+
 
 
 
