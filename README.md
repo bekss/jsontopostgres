@@ -27,7 +27,7 @@ ____
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Image.png)  
 ____
-## [Image of the console programm:](https://github.com/bekss/jsontopostgres/blob/main/jsontopostgresql.exe)
+## [Console programm:](https://github.com/bekss/jsontopostgres/blob/main/jsontopostgresql.exe)
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Console_image.PNG)  
 
