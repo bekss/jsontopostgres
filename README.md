@@ -1,5 +1,5 @@
 # jsontopostgres  
-With this file you can your json file convert to postgresql data  
+With this file you can your json file convert to postgresql data only in my ....  
 
 Before using it, configure PSQL.  
 Postgres user= "postgres", password= "beka", database= "json"  
