@@ -2,6 +2,10 @@
 jsontopostgres
 With this file you can your json file convert to postgresql data 
 
+Before using it, configure PSQL. 
+Postgres user= "postgres", password= "beka", database= "json" 
+User: postgres, password: beka, database: json
+
 Installation
 Python - 3.5 - 3.8
 install psycopg2 for postgresql 
