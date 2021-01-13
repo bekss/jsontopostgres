@@ -16,7 +16,7 @@ psycopg2,requests,tkinter,tksheet,tkcalendar
 Installation guide:
 
 pip install pipenv
-pipenv --python 3.8
+pipenv --python 3.8   
 pipenv shell
 pipenv install psycopg2
 pipenv install requests
