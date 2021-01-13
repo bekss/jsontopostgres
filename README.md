@@ -6,7 +6,7 @@ Before using it, configure PSQL.
 Postgres user= "postgres", password= "beka", database= "json"  
 User: postgres, password: beka, database: json  
 
-Installation  
+Installation:  
 Python - 3.5 - 3.8  
 install psycopg2 for postgresql  
 Required libraries:  
@@ -24,11 +24,11 @@ pipenv install tksheet
 pipenv install tkcalendar  
 pipenv install tkinter  
 
-Image of the program  
+Image of the program:  
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Image.PNG)  
 
-Image of the console programm  
+Image of the console programm:  
 
 ![](https://github.com/bekss/jsontopostgres/blob/main/Console_image.PNG)  
 
